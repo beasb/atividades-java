@@ -1,24 +1,37 @@
 package conta;
 
 import java.util.Scanner;
-import conta.model.Conta;
+import conta.model.ContaCorrente;
+import conta.model.ContaPoupanca;
 import conta.util.Cores;
 
 public class Menu {
 
 	public static void main(String[] args) {
 		
-		Conta c1 = new Conta(1, 123, 1, "Adriana", 10000.0f);
-		c1.visualizar();
+		ContaCorrente c1 = new ContaCorrente(1, 123, 1, "Adriana", 10000.0f, 20000.0f);
+	/*	c1.visualizar();
 		c1.sacar(12000.0f);
 		c1.visualizar();
 		c1.depositar(5000.0f);
-		c1.visualizar();
-
-	
-		//Instanciamento | Classe -> Obejto Utilizavel 
-//		Conta c1 = new Conta(123456, 0001, 1, "Maria das Neves", 500f);
-//		c1.setSaldo(50000f);
+		c1.visualizar(); */
+		
+		// Instanciamento da Classe Conta Corrente
+		ContaCorrente cc2 = new ContaCorrente(1, 34, 1, "Francisco", 500.0f, 1000.0f);
+		cc2.visualizar();
+		
+		//Instaciamento da Classe Conta Corrente com Limite Fixo
+		ContaCorrente cc3 = new ContaCorrente(3, 12345, 1, "João", 1000.0f);
+		cc3.visualizar();
+		
+		ContaPoupanca cp4 = new ContaPoupanca(3, 123, 2, "Victor", 100000.0f, 15);
+		cp4.visualizar();
+		cp4.sacar(1000.0f);
+		cp4.visualizar();
+		cp4.depositar(5000.0f);
+		cp4.visualizar(); 
+		
+		System.out.println();
 		
 //		System.out.println("Titular: " + c1.getTitular());
 //		System.out.println("Saldo: " + c1.getSaldo());

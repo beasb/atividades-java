@@ -1,6 +1,7 @@
 package conta.model;
 
-public class Conta {
+// Classe Abstrata -> Base para criar outras Classes
+public abstract class Conta {
 	
 	//Atributos / Variaveis 
 	private int numero;     
@@ -9,13 +10,6 @@ public class Conta {
 	private String titular; 
 	private float saldo;   
 	
-	/*3 Modificadores de Acesso - Encapsulamento
-	 * Private  - somente a propria classe acessa
-	 * Protected - somente as classes dentro do mesmo pacote suas heranças
-	 * Public - qualquer classe acessa 
-	 * Default - igual a protected mas sem heranças
-	 * */
-	
 	//Método Especial - Método Construtor
 	public Conta(int numero, int agencia, int tipo, String titular, float saldo) {
 		this.numero = numero;
@@ -23,7 +17,6 @@ public class Conta {
 		this.tipo = tipo;
 		this.titular = titular;
 		this.saldo = saldo;
-
 	}
 	
 	//Comportamentos/Métodos
@@ -69,6 +62,7 @@ public class Conta {
 	public void setSaldo(float saldo) {
 		this.saldo = saldo;
 	}
+	
 	
 	public boolean sacar(float valor) {
 		
